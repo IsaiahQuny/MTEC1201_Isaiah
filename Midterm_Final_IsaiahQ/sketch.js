@@ -8,7 +8,8 @@ The Green Lantern so I'm sticking with Green Lantern
 */
 let x = 100;
 let y = 100;
-let transparency = 255;
+let transparencyBall = 150
+let transparencyText = 0;
 let ms = 0;
 let lastTime = 0;
 let scene = 1
@@ -51,15 +52,15 @@ function setup() {
     if (scene == 1) {
 
         background(0);
-        fill(175, 255, 189,transparency);
-        stroke(105,255,105,transparency);
+        fill(175, 255, 189,transparencyBall);
+        stroke(105,255,105,transparencyBall);
         strokeWeight(24);
         circle(x, y, 125);
         x = x + 0.5;
         y = y + 0.5;
         
         if (ms - lastTime > 5000) {
-            transparency = transparency - 5;
+            transparencyBall = transparencyBall + 150;
             lastTime = ms;
         }
     }
@@ -204,18 +205,25 @@ off of 4, since I'm really proud of it and it's like all I got.*/
     }
     if (scene == 11) {
         background(0,10,0);
-        textSize(32);
+        textSize(25,transparencyText);
     ms = millis();
     textFont(font3);
     textAlign(CENTER);
-    fill(0,255,0, );
-      strokeWeight(3.5);
-      text("In Brightest Day", 400, 200);
-      text("In Blackest Night", 400, 250);
+
+        
+    
+    fill(0,255,0,transparencyText);
+      strokeWeight(3.5,transparencyText);
+      stroke(0,transparencyText);
+      text("In Brightest Day", 400, 100);
+      text("In Blackest Night", 400, 200);
       text("No Evil Shall Escape My Sight", 400, 300);
-      text("Let Those Who Worship Evil's Might", 400, 350);
-      text("BEWARE My Power", 400, 400);
-      text("Green Lantern's Light!", 400, 450);
+      text("Let Those Who Worship", 400, 400);
+      text("Evil's Might", 400,475);
+      text("BEWARE My Power", 400, 530);
+      text("Green Lantern's Light!", 400, 630);
+
+      transparencyText = transparencyText + 1.5
 
     }
 /*I wanted to make this fade in, and I wanted to make each sentence
