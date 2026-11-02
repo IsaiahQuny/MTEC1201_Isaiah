@@ -289,7 +289,8 @@ for this project. I took this oath from my short study 4*/
             scene = 1;
             x = 100;
             y = 100;
-            transparency = 255;
+            transparencyBall = 255;
+            transparencyText= 0;
             x = x + 0.5;
             y = y + 0.5;
 
